@@ -1,0 +1,80 @@
+h1 a {
+    color: #FCA205;
+    font-family: 'Lobster';
+}
+body{
+padding-left: 35px;
+}
+
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+.page-header {
+     background-color: #ff9400;
+     margin-top: 0;
+     padding: 20px 20px 20px 40px;
+ }
+
+
+.post-text{
+font-size:14pt;}
+
+ .btn-success{
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#05ac50+0,21dd72+50,05c44e+51,05ac50+71,05ac50+100 */
+ background: #05ac50;
+ /* Old browsers */
+ background: -moz-linear-gradient(-45deg, #05ac50 0%, #21dd72 50%, #05c44e 51%, #05ac50 71%, #05ac50 100%);
+ /* FF3.6-15 */
+ background: -webkit-linear-gradient(-45deg, #05ac50 0%,#21dd72 50%,#05c44e 51%,#05ac50 71%,#05ac50 100%);
+ /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(135deg, #05ac50 0%,#21dd72 50%,#05c44e 51%,#05ac50 71%,#05ac50 100%);
+ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05ac50', endColorstr='#05ac50',GradientType=1 );
+ /* IE6-9 fallback on horizontal gradient */
+ background-size: 400% 400%;
+ -webkit-animation: AnimationName 3s ease infinite;
+ -moz-animation: AnimationName 3s ease infinite;
+ animation: AnimationName 3s ease infinite;
+ -webkit-animation: AnimationName 3s ease infinite;
+ -moz-animation: AnimationName 3s ease infinite;
+ animation: AnimationName 3s ease infinite;
+ border: medium none;
+}
