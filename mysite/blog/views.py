@@ -3,6 +3,8 @@ from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, EnterForm
 from django.shortcuts import redirect
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login
 
 
 def post_list(request):
@@ -47,3 +49,20 @@ def post_edit(request, pk):
 def post_authorisation(request):
     form = EnterForm()
     return render(request, 'blog/post_authorisation.html', {'form': form})
+
+
+def registration(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('base')
+    else:
+        form = UserCreationForm()
+
+    context = {'form': form}
+    return render(request, 'blog/registration.html', context)

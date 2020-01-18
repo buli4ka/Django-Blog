@@ -1,9 +1,17 @@
-{%extends 'blog/base.html'%}
+{% extends 'blog/base.html' %}
 
 {%block content%}
-<h1 style="text-align:center">Authorisation</h1>
- <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+{% if form.errors %}
+<p>There error</p>
+{% endif %}
+{% if next %}
+<p>NoNoNO))</p>
+{% endif %}
+<form method="post" action="{%url 'post_authorisation'%}">
+    {%csrf_token%}
+    <p>Enter your login:  {{ form.login }}</p>
+    <p>Enter your password:  {{ form.password }}</p>
+     <p><input type="submit" value="login" > </p>
+    <input type="hidden" name="next" value="{{next}}">
+</form>
 {%endblock%}

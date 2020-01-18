@@ -21,3 +21,4 @@ class Post(models.Model):
 class Authorisation(models.Model):
     login = models.CharField(max_length=72)
     password = models.CharField(max_length=72)
+
