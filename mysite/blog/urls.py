@@ -9,3 +9,6 @@ urlpatterns = [
     path('post/authorisation', views.post_authorisation, name='post_authorisation'),
     path('registration', views.registration, name='registration'),
 ]
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'

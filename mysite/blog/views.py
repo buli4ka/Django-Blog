@@ -5,7 +5,11 @@ from .forms import PostForm, EnterForm
 from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 
+@login_required
+def home(request):
+    return render(request, 'blog/home.html')
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -60,7 +64,7 @@ def registration(request):
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('base')
+            return redirect('post_list')
     else:
         form = UserCreationForm()
 
